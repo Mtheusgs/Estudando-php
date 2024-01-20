@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box; 
+    font-family: 'Tektur', sans-serif;
+}
+body{ 
+    background-color: white ;
+    height: 100vh;
+    margin: 0px;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 160px 1fr 120px; 
+    grid-template-areas: 
+        "topo" 
+        "mido" 
+        "boto"
+} 
+.topo{
+    grid-area: topo; 
+    background-color: #297373;  
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: 10px;  
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; 
+} 
+.topo>h1{
+    margin: 0%; 
+    font-weight: 300; 
+    font-size: 3.0rem ;
+} 
+.topo>h2{
+    margin: 10px; 
+    font-weight: 600;
+} 
+.mido{ 
+    grid-area: mido; 
+    background-color: #FCF7FF;  
+    padding: 20px;  
+    height: calc(100 - 280px);
+} 
+.boto{
+    grid-area: boto; 
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; 
+    background-color: white; 
+    font-size: 1.2rem; 
+    padding: 0px 20px; 
+    color: #444; 
+} 
+.men {
+    background-color: #FFDDE2; 
+    height:100%;
+    border-radius: 15px; 
+    padding: 20px; 
+    display: flex;  
+    justify-content: center; 
+    overflow-y: scroll; 
+} 

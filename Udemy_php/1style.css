@@ -1,0 +1,166 @@
+* {
+    font-family: "Merriweather", serif;
+    box-sizing: border-box;
+} 
+body{
+    height: 100vh; /* tomanho absoluto do site */
+    margin: 0px;   /*margin do site até as mains */ 
+    display: grid;
+    grid-template-rows:120px 1fr 60px ; /* Divisão do por linhas site (*/
+    grid-template-columns: 1fr; /*Divisão do por colunas site (3*/
+    grid-template-areas:        /*molde*/
+        "topo"
+        "principal "
+        "rodape"; 
+} 
+.topo{
+    grid-area: topo; 
+    background-color: #1867c0; 
+    color: white; 
+    display: flex; 
+    flex-direction: column;  /* posicionamento principal*/
+    justify-content: center; /* posicionamento dependendo flex*/ 
+    align-items: center;  /* posicionamento secundário*/
+    padding-bottom: 10px ;  /* margin da letra dependedo do local*/  
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
+} 
+.topo>h1{
+    margin: 0px; 
+    font-weight: 300;
+    font-size: 2.9rem;
+
+}  
+.topo>h2{
+    margin: 0px;
+    font-weight: 200; 
+    font-size: 1.6rem;
+}
+.principal{
+    grid-area: principal; 
+    height: calc(100vh - 180px);  
+    background-color: #f0f0f0; 
+    padding: 20px;
+
+}  
+.conteudo {
+    position: relative; 
+    height: 100%; 
+    overflow-y: scroll; /* se ficar muito grande pode dar scroll*/ 
+    background-color: white;
+    padding: 20px; 
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.rodape {
+    grid-area: rodape;
+    background-color: white; 
+    display: flex; 
+    justify-content: flex-end;  
+    align-items: center; 
+    font-size: 1.2rem; 
+    padding: 0px 20px; 
+    color: #444; 
+} 
+.modulo{
+    flex-basis: 32%;
+    margin-bottom: 20px; 
+    border-radius: 5px;
+}
+.modulos {
+    display: flex;
+    flex-wrap: wrap; /*Quebrar linha*/ 
+    justify-content: space-around;
+    flex-basis: 32%; /*Quanto cada um ocupa na tela*/ 
+}
+
+.modulo >h3 {
+    margin: 0px;
+    color: white; 
+    font-weight: 300;
+    font-size: 1.5rem; 
+    background-color: #1867c0; 
+    padding: 10px 20px;    
+
+} 
+.modulo > ul{
+    margin: 0px;
+    padding: 10px; 
+    list-style: none; /*tira ponto da lista*/
+} 
+
+.modulo>ul li{
+    padding: 7px; 
+    font-size: 1.1rem; 
+    cursor: pointer; /*Virar mão*/ 
+
+    
+}
+.modulo > ul li a{
+    display: flex; 
+    text-decoration: none; 
+    color: #222;
+}  
+.modulo> ul>li:hover{
+    background-color: #EEE;
+}
+
+
+
+.modulo.verde{
+    border:2px solid #4CAf50 ;
+} 
+.modulo.verde> h3{
+    background-color:  #4CAf50 ;
+}
+
+
+
+.modulo.red{
+    border:2px solid red;
+} 
+.modulo.red> h3{
+    background-color: red ;
+}
+
+
+
+.modulo.blue{
+    border:2px solid blue;
+} 
+.modulo.blue> h3{
+    background-color: blue;
+}
+
+
+
+.modulo.violet{
+    border:2px solid violet;
+} 
+.modulo.violet> h3{
+    background-color: violet ;
+}
+
+
+
+.modulo.pink{
+    border:2px solid pink;
+} 
+.modulo.pink> h3{
+    background-color: pink ;
+}
+
+
+.modulo.orange{
+    border:2px solid orange;
+} 
+.modulo.orange> h3{
+    background-color: orange ;
+}
+
+
+.modulo.black{
+    border:2px solid black;
+} 
+.modulo.black> h3{
+    background-color:  black ;
+}
